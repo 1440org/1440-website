@@ -23,8 +23,29 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     color: white;
     font-size: 3em;
-    text-align: center;
+    margin-right: 50px;
+    text-align: right;
 }
+
+#minutes-passed {
+    font-size: 10rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* mobile styling */
+/* @media screen and (max-width: 600px) {
+    .content {
+        font-size: 2em;
+        margin-right: 0;
+        text-align: center;
+    }
+    #minutes-passed {
+        font-size: 20rem;
+        color: #fff;
+        margin-top: 20px;
+    }
+} */
