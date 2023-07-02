@@ -1,24 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById('background-video');
-    const videoSources = [
-        'jetski.mp4',
-        'skiing.mp4',
-        'surfing.mp4',
-        'friends-kayaking.mp4'
-    ];
-    let currentSource = 0;
+    // const video = document.getElementById('background-video');
+    // const videoSources = [
+    //     'friends-kayaking.mp4'
+    // ];
+    // let currentSource = 0;
 
-    video.src = videoSources[currentSource];
+    // video.src = videoSources[currentSource];
 
-    video.addEventListener('ended', function() {
-        currentSource++;
-        if (currentSource >= videoSources.length) {
-            currentSource = 0;
-        }
-        video.src = videoSources[currentSource];
-        video.load();
-        video.play();
-    });
+    // video.addEventListener('ended', function() {
+    //     currentSource++;
+    //     if (currentSource >= videoSources.length) {
+    //         currentSource = 0;
+    //     }
+    //     video.src = videoSources[currentSource];
+    //     video.load();
+    //     video.play();
+    // });
 
     setInterval(function() {
         const now = new Date();
