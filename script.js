@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const secondsLeftInLastMinute = (secondsLeft % 60).toString().padStart(2, '0');
 
 
-        document.getElementById('minutes-passed').innerHTML = `${minutesLeft}<span class="small-font">. ${secondsLeftInLastMinute}</span> / 1440`;
+        document.getElementById('minutes-passed').innerHTML = `${minutesLeft}<span class="small-font">:${secondsLeftInLastMinute}</span> / 1440`;
     }, 1000);
 });
