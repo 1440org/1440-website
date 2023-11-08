@@ -16,11 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
     //     video.load();
     //     video.play();
     // });
-
+    
     setInterval(function() {
         const now = new Date();
-        const minutesPassed = now.getHours() * 60 + now.getMinutes();
-        const minutesLeft = 1440 - minutesPassed;
-        document.getElementById('minutes-passed').innerHTML = `${minutesLeft} / 1440`;
+        const totalSecondsToday = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+        const totalSecondsInDay = 86400; // 24 hours * 60 minutes * 60 seconds
+        const secondsLeft = totalSecondsInDay - totalSecondsToday;
+
+        const minutesLeft = Math.floor(secondsLeft / 60);
+        const secondsLeftInLastMinute = (secondsLeft % 60).toString().padStart(2, '0');
+
+
+        document.getElementById('minutes-passed').innerHTML = `${minutesLeft}<span class="small-font">. ${secondsLeftInLastMinute}</span> / 1440`;
     }, 1000);
 });
